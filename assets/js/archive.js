@@ -136,17 +136,20 @@ let swiperPortfolio = new Swiper(".portfolio__container", {
 let swiperTestimonial = new Swiper(".testimonial__container", {
   loop: true,
   grabCursor: true,
+  slidesPerView: 1,
   spaceBetween: 48,
+  speed: 600,
+
+  autoplay: {
+    delay: 4500,
+    disableOnInteraction: false,
+    pauseOnMouseEnter: true,
+  },
 
   pagination: {
     el: ".swiper-pagination-testimonial",
     clickable: true,
     dynamicBullets: true,
-  },
-  breakpoints: {
-    568: {
-      slidesPerView: 2,
-    },
   },
 });
 

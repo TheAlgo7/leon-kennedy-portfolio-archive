@@ -1,16 +1,16 @@
 /*=============== GOOGLE FONTS ===============*/
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Chakra+Petch:wght@400;500;600;700&display=swap");
 
 /*=============== VARIABLES CSS ===============*/
 :root {
   --header-height: 3rem;
 
-  /*========== Colors (HULK GREEN) ==========*/
-  --hue-color: 88;
-  --first-color: hsl(var(--hue-color), 69%, 45%);
-  --first-color-second: hsl(var(--hue-color), 69%, 45%);
-  --first-color-alt: hsl(var(--hue-color), 57%, 40%);
-  --first-color-lighter: hsl(var(--hue-color), 92%, 85%);
+  /*========== Colors (RESIDENT EVIL RED) ==========*/
+  --hue-color: 0;
+  --first-color: hsl(var(--hue-color), 100%, 40%);
+  --first-color-second: hsl(var(--hue-color), 100%, 27%);
+  --first-color-alt: hsl(var(--hue-color), 100%, 30%);
+  --first-color-lighter: hsl(var(--hue-color), 60%, 88%);
 
   --title-color: hsl(var(--hue-color), 8%, 15%);
   --text-color: hsl(var(--hue-color), 8%, 45%);
@@ -22,7 +22,8 @@
   --scroll-thumb-color: hsl(var(--hue-color), 12%, 80%);
 
   /*========== Font and typography ==========*/
-  --body-font: "Poppins", sans-serif;
+  --display-font: "Chakra Petch", sans-serif;
+  --body-font: "Barlow", sans-serif;
   --big-font-size: 2rem;
   --h1-font-size: 1.5rem;
   --h2-font-size: 1.25rem;
@@ -66,14 +67,15 @@
 
 /*========== Variables Dark theme ==========*/
 body.dark-theme {
-  --first-color-second: hsl(var(--hue-color), 30%, 8%);
-  --title-color: hsl(var(--hue-color), 8%, 95%);
-  --text-color: hsl(var(--hue-color), 8%, 75%);
-  --input-color: hsl(var(--hue-color), 29%, 16%);
-  --body-color: hsl(var(--hue-color), 28%, 12%);
-  --container-color: hsl(var(--hue-color), 29%, 16%);
-  --scroll-bar-color: hsl(var(--hue-color), 12%, 48%);
-  --scroll-thumb-color: hsl(var(--hue-color), 12%, 36%);
+  --first-color-second: hsl(var(--hue-color), 75%, 17%);
+  --first-color-lighter: hsl(var(--hue-color), 30%, 20%);
+  --title-color: hsl(var(--hue-color), 5%, 95%);
+  --text-color: hsl(var(--hue-color), 5%, 72%);
+  --input-color: hsl(var(--hue-color), 10%, 12%);
+  --body-color: hsl(var(--hue-color), 6%, 8%);
+  --container-color: hsl(var(--hue-color), 8%, 12%);
+  --scroll-bar-color: hsl(var(--hue-color), 6%, 28%);
+  --scroll-thumb-color: hsl(var(--hue-color), 6%, 20%);
 }
 
 /*========== Button Dark/Light ==========*/
@@ -148,6 +150,7 @@ h3,
 h4 {
   color: var(--title-color);
   font-weight: var(--font-semi-bold);
+  font-family: var(--display-font);
 }
 
 ul {
@@ -218,6 +221,11 @@ img {
 .nav__toggle {
   color: var(--title-color);
   font-weight: var(--font-medium);
+}
+
+.nav__logo {
+  font-family: var(--display-font);
+  letter-spacing: 0.15em;
 }
 
 .nav__logo:hover {
@@ -347,7 +355,8 @@ img {
 }
 
 .home__blob-img {
-  width: 170px;
+  width: 200px;
+  height: 205px;
 }
 
 .home__data {
@@ -499,10 +508,14 @@ img {
 
 /*=============== ABOUT ===============*/
 .about__img {
-  width: 200px;
+  width: 100%;
+  max-width: 400px;
+  height: 220px;
   border-radius: 0.5rem;
   justify-self: center;
-  align-self: center;
+  align-self: start;
+  object-fit: cover;
+  object-position: center center;
 }
 
 .about__description {
@@ -807,9 +820,12 @@ img {
 }
 
 .portfolio__img {
-  width: 265px;
+  width: 100%;
+  height: 210px;
   border-radius: 0.5rem;
   justify-self: center;
+  object-fit: cover;
+  object-position: center;
 }
 
 .portfolio__title {
@@ -864,7 +880,8 @@ img {
 
 .project__bg {
   background-color: var(--first-color-second);
-  padding-top: 3rem;
+  padding: 3rem 0 0;
+  overflow: hidden;
 }
 
 .project__title {
@@ -882,44 +899,89 @@ img {
 }
 
 .project__img {
-  width: 232px;
+  display: block;
+  width: auto;
+  max-width: 88%;
+  height: auto;
+  max-height: 340px;
   justify-self: center;
+  object-fit: contain;
+  margin: 2rem auto 0;
 }
 
 /*=============== TESTIMONIAL ===============*/
-.testimonial__data,
-.testimonial__header {
-  display: flex;
+.testimonial__container {
+  padding-bottom: 3rem;
 }
 
-.testimonial__data {
-  justify-content: space-between;
-  margin-bottom: var(--mb-1);
+.testimonial__content {
+  position: relative;
+  background-color: var(--container-color);
+  border-radius: 0.5rem;
+  padding: 2rem 2rem 1.75rem;
+  border: 1px solid rgba(204, 0, 0, 0.18);
+  overflow: hidden;
 }
 
-.testimonial__img {
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  margin-right: var(--mb-0-75);
-}
-
-.testimonial__name {
-  font-size: var(--h3-font-size);
-  font-weight: var(--font-medium);
-}
-
-.testimonial__client {
-  font-size: var(--small-font-size);
-  color: var(--text-color-light);
+.testimonial__content::after {
+  content: '\201C';
+  position: absolute;
+  bottom: -1.5rem;
+  right: 1.25rem;
+  font-size: 9rem;
+  line-height: 1;
+  color: var(--first-color);
+  opacity: 0.07;
+  font-family: Georgia, serif;
+  pointer-events: none;
+  user-select: none;
 }
 
 .testimonial__description {
-  margin-bottom: var(--mb-2-5);
+  font-size: var(--normal-font-size);
+  line-height: 1.8;
+  font-style: italic;
+  color: var(--text-color);
+  margin-bottom: 1.5rem;
+  position: relative;
+  z-index: 1;
 }
 
-.testimonial__icon-star {
+.testimonial__header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--scroll-bar-color);
+  position: relative;
+  z-index: 1;
+}
+
+.testimonial__img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 2px solid var(--first-color);
+  object-fit: cover;
+  object-position: center top;
+  flex-shrink: 0;
+}
+
+.testimonial__name {
+  font-size: var(--normal-font-size);
+  font-weight: var(--font-semi-bold);
+  font-family: var(--display-font);
+  color: var(--title-color);
+  letter-spacing: 0.04em;
+}
+
+.testimonial__client {
+  display: block;
+  font-size: var(--smaller-font-size);
   color: var(--first-color);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-top: 0.15rem;
 }
 
 .swiper .swiper-pagination-testimonial {
@@ -1049,8 +1111,12 @@ img {
   bottom: -20%;
   background-color: var(--first-color);
   opacity: 0.8;
-  padding: 0 0.3rem;
-  border-radius: 0.4rem;
+  width: 2.6rem;
+  height: 2.6rem;
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   z-index: var(--z-tooltip);
   transition: 0.4s;
 }
@@ -1261,7 +1327,9 @@ img {
   }
 
   .about__img {
-    width: 350px;
+    width: 100%;
+    max-width: 480px;
+    height: 270px;
   }
 
   .about__description {
@@ -1306,15 +1374,12 @@ img {
   }
 
   .portfolio__img {
-    width: 320px;
+    width: 100%;
+    height: 250px;
   }
 
   .portfolio__content {
     align-items: center;
-  }
-
-  .project {
-    text-align: initial;
   }
 
   .project__bg {
@@ -1325,12 +1390,21 @@ img {
     background-color: var(--first-color-second);
     border-radius: 1rem;
     padding: 3rem 2.5rem 0;
-    grid-template-columns: 1fr max-content;
-    column-gap: 3rem;
+    grid-template-columns: 1fr;
+    justify-items: center;
   }
 
   .project__data {
-    padding-top: 0.8rem;
+    padding-top: 0;
+    max-width: 560px;
+  }
+
+  .project__img {
+    width: auto;
+    max-width: 360px;
+    height: auto;
+    max-height: 420px;
+    margin: 0;
   }
 
   .footer__container {
@@ -1410,5 +1484,158 @@ img {
   body {
     zoom: 1.25;
     /* Target Chrome, Edge, Opera, Safari */
+  }
+}
+
+/*==================== LEON KENNEDY — THEME EXTENSIONS ====================*/
+
+/*--- Scanline atmosphere overlay ---*/
+body::after {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: repeating-linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.025) 0px,
+    rgba(0, 0, 0, 0.025) 1px,
+    transparent 1px,
+    transparent 4px
+  );
+  pointer-events: none;
+  z-index: 9999;
+}
+
+/*--- Home section entrance animation ---*/
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(22px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.home__social      { animation: fadeInUp 0.7s ease-out 0.1s both; }
+.home__img         { animation: fadeInUp 0.7s ease-out 0.25s both; }
+.home__subtitle    { animation: fadeInUp 0.7s ease-out 0.3s both; }
+.home__description { animation: fadeInUp 0.7s ease-out 0.45s both; }
+.home__data .button { animation: fadeInUp 0.7s ease-out 0.6s both; }
+.home__scroll      { animation: fadeInUp 0.7s ease-out 0.75s both; }
+
+/*--- Name glitch effect ---*/
+@keyframes nameGlitch {
+  0%, 93%, 100% {
+    text-shadow: none;
+    transform: none;
+  }
+  93.5% {
+    text-shadow: -3px 0 var(--first-color), 3px 0 var(--first-color-lighter);
+    transform: translateX(2px);
+  }
+  94% {
+    text-shadow: 3px 0 var(--first-color), -3px 0 var(--first-color-lighter);
+    transform: translateX(-2px);
+  }
+  94.5% {
+    text-shadow: none;
+    transform: none;
+  }
+}
+
+.home__title {
+  will-change: transform;
+  animation: fadeInUp 0.7s ease-out 0.15s both, nameGlitch 9s ease-in-out 1.5s infinite;
+}
+
+/*--- Skill bars animate in on load ---*/
+@keyframes skillFill {
+  to { max-width: 100%; }
+}
+
+.skills__percentage {
+  max-width: 0;
+  animation: skillFill 1.4s cubic-bezier(0.4, 0, 0.2, 1) 0.6s forwards;
+}
+
+/*--- Button red glow on hover ---*/
+.button:not(.button--link):not(.button--white) {
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.button:not(.button--link):not(.button--white):hover {
+  box-shadow: 0 0 18px rgba(204, 0, 0, 0.45);
+}
+
+/*--- Active nav link pulse ---*/
+@keyframes linkGlow {
+  0%, 100% { text-shadow: none; }
+  50% { text-shadow: 0 0 10px rgba(204, 0, 0, 0.55); }
+}
+
+.active-link {
+  animation: linkGlow 2.5s ease-in-out infinite;
+}
+
+/*--- Services card glow on hover (no transform — preserves modal position:fixed) ---*/
+.services__content {
+  transition: box-shadow 0.3s;
+}
+
+.services__content:hover {
+  box-shadow: 0 8px 24px rgba(204, 0, 0, 0.25);
+}
+
+/*--- Qualification rounder pulse ---*/
+@keyframes roundPulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(204, 0, 0, 0); }
+  50% { box-shadow: 0 0 0 4px rgba(204, 0, 0, 0.25); }
+}
+
+.qualification__rounder {
+  animation: roundPulse 3s ease-in-out infinite;
+}
+
+/*--- Social icon hover scale ---*/
+.home__social-icon {
+  transition: color 0.3s, transform 0.25s;
+}
+
+.home__social-icon:hover {
+  transform: scale(1.2) translateX(3px);
+}
+
+/*--- Scroll indicator enhanced ---*/
+.home__scroll-button {
+  transition: color 0.3s;
+}
+
+.home__scroll-name {
+  transition: letter-spacing 0.35s ease;
+}
+
+.home__scroll-button:hover .home__scroll-name {
+  letter-spacing: 3px;
+}
+
+/*--- Section subtitle upgrade ---*/
+.section__subtitle {
+  color: var(--first-color);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+/*--- Accessibility: respect reduced motion ---*/
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
   }
 }
