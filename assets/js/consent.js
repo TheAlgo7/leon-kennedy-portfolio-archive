@@ -57,7 +57,7 @@
     banner.setAttribute('aria-label', 'Cookie consent');
     banner.innerHTML = `
       <div class="cookie-banner__content">
-        <i class="ri-cookie-line cookie-banner__icon" aria-hidden="true"></i>
+        <i class="uil uil-shield cookie-banner__icon" aria-hidden="true"></i>
         <p class="cookie-banner__text">
           This site uses Google Analytics to understand visitor traffic.
           No personal data is sold or shared.
