@@ -1,11 +1,16 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="1000" viewBox="0 0 1000 1000">
-  <defs>
-    <style>
-      .cls-1 {
-        fill: #cc0000;
-        fill-rule: evenodd;
-      }
-    </style>
-  </defs>
-  <path id="A" class="cls-1" d="M579.12-.3C255.142-.3,122.266,199.758,122.266,670.05V1000H340.242c35.832-34.339,83.607-98.537,83.607-235.892,0-35.832-2.986-80.621-7.465-128.4H579.12V1000h298.6V-0.3H579.12Zm0,621.083H414.891C391,368.466,340.242,13.135,564.19,13.135h14.93V620.781Z"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+  <title>Shield Star Favicon</title>
+  <desc>Flat black shield icon with icy silver outline and centered five-point star.</desc>
+  <path d="M158 82h196v44h42v184L256 438 116 310V126h42z" fill="#101216"/>
+  <path d="M158 82h196v44h42v184L256 438 116 310V126h42z" fill="none" stroke="#E5ECFF" stroke-width="24" stroke-linejoin="round"/>
+  <path d="M158 82h196v44h42v184L256 438 116 310V126h42z" fill="none" stroke="#8EA1C7" stroke-width="8" stroke-linejoin="round"/>
+  <g transform="translate(256 258)">
+    <path d="M0-94 23-29 92-29 36 11 57 78 0 38-57 78-36 11-92-29-23-29z" fill="#EAF2FF"/>
+    <path d="M0-94 23-29 0 38z" fill="#DDE8FF"/>
+    <path d="M23-29 92-29 36 11 0 38z" fill="#F8FBFF"/>
+    <path d="M0 38 57 78 36 11z" fill="#BAC9EA"/>
+    <path d="M0 38-57 78-36 11z" fill="#C7D6F5"/>
+    <path d="M-92-29-23-29 0 38-36 11z" fill="#EDF4FF"/>
+    <path d="M0-94-23-29 0 38 23-29z" fill="#CCD9F4" opacity=".9"/>
+  </g>
 </svg>
