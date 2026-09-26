@@ -1,126 +1,101 @@
-<div align="center">
+<p align="center">
+  <img src="docs/readme/hero.png" alt="Kennedy: a portfolio, filed as a classified dossier" width="100%">
+</p>
 
-# Leon S. Kennedy — DSO Field Dossier
+<p align="center">
+  <strong>The 2024 Algothrim portfolio system, preserved and re-themed as a DSO field dossier for Leon S. Kennedy.</strong><br>
+  Every section of a personal portfolio, written in character. Vanilla HTML, CSS and JavaScript.
+</p>
 
-### *A character-driven portfolio archive. Classified.*
+<p align="center">
+  <a href="https://leon-kennedy-portfolio-archive.vercel.app"><strong>Open the dossier</strong></a>
+  &nbsp;·&nbsp;
+  <a href="#sections">Sections</a>
+  &nbsp;·&nbsp;
+  <a href="#design">Design</a>
+  &nbsp;·&nbsp;
+  <a href="#run-it-locally">Run it locally</a>
+</p>
 
-[![Live Site](https://img.shields.io/badge/Live-leon--kennedy--portfolio--archive.vercel.app-cc0000?style=flat-square&labelColor=0d0d0d)](https://leon-kennedy-portfolio-archive.vercel.app)
-[![Stack](https://img.shields.io/badge/Stack-Vanilla%20HTML%20·%20CSS%20·%20JS-cc0000?style=flat-square&labelColor=0d0d0d)](https://github.com/TheAlgo7/leon-kennedy-portfolio-archive)
-[![Theme](https://img.shields.io/badge/Theme-Resident%20Evil-cc0000?style=flat-square&labelColor=0d0d0d)](https://github.com/TheAlgo7/leon-kennedy-portfolio-archive)
-[![Built by](https://img.shields.io/badge/Built%20by-The%20Algothrim-cc0000?style=flat-square&labelColor=0d0d0d)](https://thealgothrim.com)
+<p align="center">
+  <img alt="Vanilla HTML, CSS and JS" src="https://img.shields.io/badge/stack-vanilla%20HTML%2C%20CSS%2C%20JS-CC0000?style=flat-square&labelColor=0D0D0D">
+  <img alt="Theme" src="https://img.shields.io/badge/theme-Resident%20Evil-CC0000?style=flat-square&labelColor=0D0D0D">
+  <img alt="Dark and light" src="https://img.shields.io/badge/modes-dark%20%2B%20light-CC0000?style=flat-square&labelColor=0D0D0D">
+</p>
 
-</div>
+## What this is
 
-![Hero](./docs/assets/hero.png)
+Before thealgothrim.com became what it is now, it ran on this layout: a one-page portfolio with an about block, skill bars, a timeline, services, a project carousel, testimonials and a contact form. Rather than delete it, the system was kept as a standalone site and re-skinned to prove how far one structure can stretch.
 
-This is the **2024 portfolio archive** — a preserved showcase of the design system, layout patterns, and interaction work that preceded the current Algothrim build. Rather than deleting it, it lives here as a standalone site: themed as a classified DSO field dossier for Leon Scott Kennedy from the *Resident Evil* franchise. Built with zero framework overhead — pure Vanilla HTML, CSS, and JavaScript with Swiper.js for the carousel components. Dark mode is on by default. Everything is intentional.
+The subject is Leon Scott Kennedy from *Resident Evil*. The portfolio becomes a classified file: skills are an arsenal, services are field ops, projects are case files and testimonials come from Ada Wong, Claire Redfield and Hunnigan.
+
+## Screenshots
+
+<p align="center">
+  <img src="docs/readme/desktop-skills.png" width="100%" alt="The arsenal">
+</p>
+
+<table>
+  <tr>
+    <td align="center"><img src="docs/readme/desktop-about.png" width="100%" alt="The dossier"><br><sub>Dossier</sub></td>
+    <td align="center"><img src="docs/readme/desktop-portfolio.png" width="100%" alt="Case files"><br><sub>Case files</sub></td>
+  </tr>
+  <tr>
+    <td align="center"><img src="docs/readme/desktop-contact.png" width="100%" alt="Secure contact"><br><sub>Secure contact</sub></td>
+    <td align="center"><img src="docs/readme/desktop-light.png" width="100%" alt="Light mode"><br><sub>Light mode</sub></td>
+  </tr>
+</table>
+
+<p align="center">
+  <img src="docs/readme/phone.png" width="200" alt="On a phone">
+  &nbsp;&nbsp;
+  <img src="docs/readme/phone-skills.png" width="200" alt="The arsenal on a phone">
+</p>
 
 ## Sections
 
-| Section | Label | What It Does |
+| Section | In the dossier | What it does |
 | --- | --- | --- |
-| Home | `Home` | Hero — name, rank, operative summary |
-| About | `Dossier` | Case background, clearance level, stat callouts |
-| Skills | `Arsenal` | Accordion skill groups with animated fill bars |
-| Qualification | `History` | Tabbed Academic / Operational timeline |
-| Services | `Field Ops` | Three specialisation cards with modal detail views |
-| Portfolio | `Case Files` | Swiper carousel — mission reports |
-| CTA Banner | — | Outbreak alert strip with contact CTA |
-| Testimonials | `Field Reviews` | Character assessments — Ada Wong, Claire Redfield, Hunnigan |
-| Contact | `Contact` | DSO encrypted channel form |
-| Footer | — | `KENNEDY` — Agent. Survivor. Asset. |
+| Home | Home | Name, rank and a one-line operative summary |
+| About | Dossier | Case background, clearance level and stat callouts |
+| Skills | Arsenal | Accordion groups with animated bars |
+| Qualification | History | A tabbed academic and operational timeline |
+| Services | Field Ops | Three specialisation cards with detail modals |
+| Portfolio | Case Files | A Swiper carousel of mission reports |
+| Testimonials | Field Reviews | Assessments from people who worked with him |
+| Contact | Secure Contact | An "encrypted channel" form |
 
-## Features
+## Design
 
-- **Dark mode by default** — Leon's dossier was never meant to be read in broad daylight
-- **Name glitch animation** — Rare, subtle. Fires every ~9 seconds on the hero title
-- **Skill bars animate in** — Fill from zero on load via `max-width` CSS trick
-- **Staggered hero entrance** — Home section elements fade up sequentially
-- **Scanline atmosphere** — Subtle horizontal scanline overlay across the full viewport
-- **Button glow on hover** — Red glow on primary CTAs
-- **Active nav pulse** — Current section link glows with a slow red text-shadow loop
-- **Services modals** — Click-to-expand field op cards
-- **Portfolio carousel** — Swiper.js slider, loop mode
-- **Testimonial carousel** — Dynamic bullet pagination, grab cursor
-- **Theme toggle** — Dark / Light switcher, saved to localStorage
-- **Fully responsive** — Mobile-first, hamburger nav on small screens
+- **Near black with one red.** The page sits at `hsl(0, 6%, 8%)`; `#cc0000` marks buttons, icons and active states, and a deep maroon carries the footer and alert banner.
+- **Written in character.** The "Human Cost" skill group rates Survival Instinct as unmeasurable and Normal Life Maintained at 0%; the academic record ends with "City was destroyed".
+- **Quiet atmosphere.** A faint scanline overlay, a rare glitch on the name, staggered entrances and skill bars that fill on load.
+- **Dark by default,** with a light mode that is remembered on the device.
+- **Responsive,** with a bottom navigation sheet on phones.
 
-## Stack
+## Built with
 
-| Layer | Technology |
-| --- | --- |
-| Markup | Semantic HTML5 |
-| Styling | Vanilla CSS — HSL custom properties, CSS animations |
-| Slider | [Swiper.js](https://swiperjs.com/) |
-| Icons | [Unicons 4.0.8](https://iconscout.com/unicons) (CDN) |
-| Hosting | [Vercel](https://vercel.com/) |
+| Layer | Choice |
+|---|---|
+| Markup and style | Semantic HTML, CSS custom properties, Chakra Petch and Barlow |
+| Carousels | [Swiper](https://swiperjs.com/), bundled locally |
+| Icons | Unicons |
+| Hosting | Vercel |
 
-## Design Language
+## Run it locally
 
-- **Near-black dark mode by default.** Body sits at `hsl(0, 6%, 8%)` — almost pure black with the faintest red undertone. The primary red (`#cc0000`) cuts through it with full contrast.
-- **Blood red accent system.** `--first-color: #cc0000` for buttons, icons, active states. `--first-color-second: hsl(0, 75%, 17%)` for the footer and CTA banner — a deep maroon that reads as intentional, not dark-mode-lazy.
-- **Character-driven copy.** Every line is written from Leon's perspective. The "Human Cost" skill group (Survival Instinct: Unmeasurable, Normal Life Maintained: 0%) is a deliberate character beat.
-- **Tactical dossier framing.** `[REDACTED]` in the stat block. "City was destroyed" as an academic record entry. The format communicates before the words do.
-- **Subtle atmosphere over spectacle.** Scanlines, a rare glitch on the title, staggered fade-ins. None of it demands attention. All of it adds up.
-
-## Character Reference
-
-Leon Scott Kennedy — born July 31, 1977. Entered Raccoon City on his first day as an RPD rookie. The city fell. He didn't. Recruited by the U.S. government in the aftermath and spent the next two decades as a blade pointed at bioterrorism threats that no one else could solve. The dossier is built around that arc: rookie → weapon → survivor asking what it cost.
-
-<details>
-<summary>Project Structure</summary>
-
-```text
-leon-kennedy-portfolio-archive/
-├── index.html
-├── assets/
-│   ├── css/
-│   │   ├── archive.css              ← Theme, layout, animations
-│   │   └── swiper-bundle.min.css
-│   ├── js/
-│   │   ├── archive.js               ← Nav, skills, modals, theme toggle, Swiper
-│   │   ├── swiper-bundle.min.js
-│   │   └── consent.js
-│   └── img/
-│       └── archive/
-│           ├── favicon.svg
-│           ├── banner-profile.png
-│           ├── about.jpg
-│           └── portfolio1–3.jpg
-├── RESKIN_BRIEF.md
-├── vercel.json
-└── README.md
-```
-
-</details>
-
-<details>
-<summary>Quick Start</summary>
-
-No build step.
+No build step. Serve the folder:
 
 ```bash
 git clone https://github.com/TheAlgo7/leon-kennedy-portfolio-archive.git
 cd leon-kennedy-portfolio-archive
+python -m http.server 8080
 ```
 
-Open directly:
+Open http://localhost:8080. `python scripts/readme-shots.py` rebuilds the screenshots in this README from the live site.
 
-```bash
-start index.html   # Windows
-open index.html    # macOS
-```
+## Licence
 
-Or serve locally:
+Copyright © 2026 Gaurav Kumar, [The Algothrim](https://thealgothrim.com). All rights reserved.
 
-```bash
-npx serve .
-```
-
-</details>
-
-<div align="center">
-
-Designed & developed by **[The Algothrim](https://thealgothrim.com)**
-
-</div>
+The code is public to read and learn from. It is not licensed for reuse. Leon S. Kennedy and *Resident Evil* belong to Capcom; this is a fan tribute and is not affiliated with them.
